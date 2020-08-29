@@ -52,6 +52,24 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
+    // TODO: discussions
+    // TODO: media
+        // recommend
+        // movies
+        // music
+        // games
+        // TV
+        // all
+        // Follow?
+    // TODO: users
+        // authenticate
+        // deauth
+        // Friends
+        // Add
+        // Follow
+    // TODO:
+    // TODO:
+
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
