@@ -11,6 +11,12 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+    }
+
     /**
      * Index method
      *
@@ -21,6 +27,7 @@ class UsersController extends AppController
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
+        $this->viewBuilder()->setOption('serialize', ['users']);
     }
 
     /**
@@ -37,6 +44,7 @@ class UsersController extends AppController
         ]);
 
         $this->set(compact('user'));
+        $this->viewBuilder()->setOption('serialize', ['user']);
     }
 
     /**

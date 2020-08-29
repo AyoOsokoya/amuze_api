@@ -11,6 +11,12 @@ namespace App\Controller;
  */
 class DiscussionsController extends AppController
 {
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+    }
+
     /**
      * Index method
      *
@@ -24,6 +30,7 @@ class DiscussionsController extends AppController
         $discussions = $this->paginate($this->Discussions);
 
         $this->set(compact('discussions'));
+        $this->viewBuilder()->setOption('serialize', ['discussions']);
     }
 
     /**
@@ -40,6 +47,7 @@ class DiscussionsController extends AppController
         ]);
 
         $this->set(compact('discussion'));
+        $this->viewBuilder()->setOption('serialize', ['discussion']);
     }
 
     /**
