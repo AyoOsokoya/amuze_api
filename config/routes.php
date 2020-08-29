@@ -50,6 +50,18 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, templates/Pages/home.php)...
      */
+
+    // Enable .json prefix to REST url to generate a json response
+    $builder->setExtensions(['json']);
+
+    // Enable REST responses for the specified controller
+    $builder->resources('Comments');
+    $builder->resources('Creators');
+    $builder->resources('Discussions');
+    $builder->resources('Media');
+    $builder->resources('UserMedia');
+    $builder->resources('Users');
+
     $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     // TODO: discussions
