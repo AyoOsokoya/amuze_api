@@ -14,7 +14,11 @@ class UsersController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        $this->loadComponent('RequestHandler');
+        try {
+            $this->loadComponent('RequestHandler');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     /**

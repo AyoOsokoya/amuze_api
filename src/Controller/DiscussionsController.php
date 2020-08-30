@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\Core\Exception\Exception;
+
 /**
  * Discussions Controller
  *
@@ -14,7 +16,11 @@ class DiscussionsController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        $this->loadComponent('RequestHandler');
+        try {
+            $this->loadComponent('RequestHandler');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     /**
