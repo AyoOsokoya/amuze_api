@@ -1,9 +1,9 @@
-#Amuzé API
+# Amuzé API
 
 This is a demo API for the web app Amuze, a social media viewing and experiencing platform.
 It is based on CakePHP 4.0, MySQL PHP 7.2
 
-##About
+## About
 The Amuzé application presents a UI for viewing and sharing movies, TV, games and books. This API backend is created to
 behave as a full implementation would using mock data. It was created in CakePHP as by following the table name conventions,
 it is possible to quickly build models and controllers along with all of the database associations .
@@ -11,11 +11,11 @@ it is possible to quickly build models and controllers along with all of the dat
 The views in this case are just JSON serializations of the data returned by the ORM. This flexibility makes it easy to
 rapidly iterate and experiment with API design.
 
-#Endpoints
+# Endpoints
 - All API requests should end with the .json extension
 - The database data comes from config/schema/amuze_api_data.sql
 
-##Retrieve User Info
+## Retrieve User Info
 This data is a object containing general user information (email, name, etc). Additionally it contains:
 - "user_media" - A list of media items they have accessed, with their review and current progress through the media
 - "discussions" - Discussions the user has partipated in
@@ -78,7 +78,7 @@ This data is a object containing general user information (email, name, etc). Ad
 }
 
 ```
-##Get Recommendations
+## Get Recommendations
 Request the media that will be displayed on the dashboard for the user that is currently viewing. This will be based
 on their viewing habits and suggestions by friends
 
@@ -87,7 +87,7 @@ on their viewing habits and suggestions by friends
 TBD
 ```
 
-##Get Discussions
+## Get Discussions
 There can be discussions regarding media by users as part of the social aspect.
 Get a discussion along with all comments.
 
@@ -122,7 +122,16 @@ Get a discussion along with all comments.
                 "updated": "2020-02-04T00:00:00+00:00",
                 "deleted": null
             }
-		]
+		],
+        "user": {
+            "id": 38,
+            "name_first": "Brear",
+            "name_last": "Parlott",
+            "email": "bparlott11@elegantthemes.com",
+            "created": "2020-02-08T00:00:00+00:00",
+            "updated": "2020-04-08T00:00:00+00:00",
+            "deleted": null
+        }
     }
 }
 
@@ -130,7 +139,7 @@ Get a discussion along with all comments.
 
 /recommend_media/user/1
 
-#Install
+# Install
 In the root directory run:
 ```bash
     composer install
