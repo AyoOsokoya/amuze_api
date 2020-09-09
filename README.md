@@ -1,6 +1,6 @@
 # Amuzé API
 
-This is a demo API for the web app Amuze, a social media viewing and experiencing platform.
+This is a demo API for the web app Amuzé, a social media viewing and experiencing platform.
 It is based on CakePHP 4.0, MySQL PHP 7.2
 
 ## About
@@ -16,16 +16,16 @@ rapidly iterate and experiment with API design.
 - The database data comes from mock data I created in config/schema/amuze_api_data.sql
 
 # Demo
-- Retrieve all users https://amuzeapi.inspireology.com/users/view/.json
+- Retrieve all users data https://amuzeapi.inspireology.com/users/view/.json
 - Retrieve User 1 data https://amuzeapi.inspireology.com/users/view/1.json
 
-- Retrive Media 1 data https://amuzeapi.inspireology.com/media/view/1.json
-- Retrive Media 1 data https://amuzeapi.inspireology.com/media/view/1.json
+- Retrieve all media data https://amuzeapi.inspireology.com/media/view/json
+- Retrieve Media data 1 data https://amuzeapi.inspireology.com/media/view/1.json
 
 ## Retrieve User Info
 This data is a object containing general user information (email, name, etc). Additionally it contains:
 - "user_media" - A list of media items they have accessed, with their review and current progress through the media
-- "discussions" - Discussions the user has partipated in
+- "discussions" - Discussions the user has participated in
 
 /users/1.json
 
@@ -83,7 +83,7 @@ This data is a object containing general user information (email, name, etc). Ad
         ]
     }
 }
-
+```
 
 ## Get Discussions
 There can be discussions regarding media by users as part of the social aspect.
@@ -132,8 +132,8 @@ Get a discussion along with all comments.
         }
     }
 }
-
 ```
+
 # TODO
 - For now this is a read only API but later on in the UI development I will add writing of create and read as it will be needs
 - AWS, GCP
@@ -144,7 +144,7 @@ Get a discussion along with all comments.
 # Install
 In the root directory run:
 ```bash
-    composer install
+composer install
 ```
 Install config/schema/amuze_api_data.sql into your MySQL/MariaDB database and configure your connection in app_local.php
 You can serve it locally with
