@@ -39,6 +39,7 @@ class ReviewsController extends AppController
         $reviews = $this->paginate($this->Reviews);
 
         $this->set(compact('reviews'));
+        $this->viewBuilder()->setOption('serialize', ['reviews']);
     }
 
     /**
@@ -55,6 +56,7 @@ class ReviewsController extends AppController
         ]);
 
         $this->set(compact('review'));
+        $this->viewBuilder()->setOption('serialize', ['review']);
     }
 
     /**

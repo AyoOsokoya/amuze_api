@@ -39,6 +39,7 @@ class ProgressController extends AppController
         $progress = $this->paginate($this->Progress);
 
         $this->set(compact('progress'));
+        $this->viewBuilder()->setOption('serialize', ['progress']);
     }
 
     /**
@@ -50,11 +51,12 @@ class ProgressController extends AppController
      */
     public function view($id = null)
     {
-        $progres = $this->Progress->get($id, [
+        $progress = $this->Progress->get($id, [
             'contain' => ['Users', 'Media'],
         ]);
 
-        $this->set(compact('progres'));
+        $this->set(compact('progress'));
+        $this->viewBuilder()->setOption('serialize', ['progress']);
     }
 
     /**

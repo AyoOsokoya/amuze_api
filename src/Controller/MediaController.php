@@ -39,6 +39,7 @@ class MediaController extends AppController
         $media = $this->paginate($this->Media);
 
         $this->set(compact('media'));
+        $this->viewBuilder()->setOption('serialize', ['media']);
     }
 
     /**
@@ -55,6 +56,7 @@ class MediaController extends AppController
         ]);
 
         $this->set(compact('media'));
+        $this->viewBuilder()->setOption('serialize', ['media']);
     }
 
     /**

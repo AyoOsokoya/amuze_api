@@ -36,6 +36,7 @@ class ServicesController extends AppController
         $services = $this->paginate($this->Services);
 
         $this->set(compact('services'));
+        $this->viewBuilder()->setOption('serialize', ['services']);
     }
 
     /**
@@ -52,6 +53,7 @@ class ServicesController extends AppController
         ]);
 
         $this->set(compact('service'));
+        $this->viewBuilder()->setOption('serialize', ['service']);
     }
 
     /**

@@ -36,6 +36,7 @@ class TypesController extends AppController
         $types = $this->paginate($this->Types);
 
         $this->set(compact('types'));
+        $this->viewBuilder()->setOption('serialize', ['types']);
     }
 
     /**
@@ -52,6 +53,7 @@ class TypesController extends AppController
         ]);
 
         $this->set(compact('type'));
+        $this->viewBuilder()->setOption('serialize', ['type']);
     }
 
     /**

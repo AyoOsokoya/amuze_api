@@ -59,28 +59,11 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->resources('Creators');
     $builder->resources('Discussions');
     $builder->resources('Media');
-    $builder->resources('UserMedia');
+    $builder->resources('Progress');
+    $builder->resources('Reviews');
     $builder->resources('Users');
 
     $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-
-    // TODO: discussions
-    // TODO: media
-        // recommend
-        // movies
-        // music
-        // games
-        // TV
-        // all
-        // Follow?
-    // TODO: users
-        // authenticate
-        // deauth
-        // Friends
-        // Add
-        // Follow
-    // TODO:
-    // TODO:
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
