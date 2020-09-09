@@ -14,10 +14,11 @@ use Cake\ORM\Entity;
  * @property string|null $email
  * @property string|null $password
  * @property \Cake\I18n\FrozenTime|null $created
- * @property \Cake\I18n\FrozenTime|null $updated
+ * @property \Cake\I18n\FrozenTime|null $modified
  * @property \Cake\I18n\FrozenTime|null $deleted
  *
  * @property \App\Model\Entity\Discussion[] $discussions
+ * @property \App\Model\Entity\UserMedia[] $user_media
  */
 class User extends Entity
 {
@@ -36,9 +37,10 @@ class User extends Entity
         'email' => true,
         'password' => true,
         'created' => true,
-        'updated' => true,
+        'modified' => true,
         'deleted' => true,
         'discussions' => true,
+        'user_media' => true,
     ];
 
     /**

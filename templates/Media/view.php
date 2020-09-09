@@ -43,8 +43,8 @@
                     <td><?= h($media->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Updated') ?></th>
-                    <td><?= h($media->updated) ?></td>
+                    <th><?= __('Modified') ?></th>
+                    <td><?= h($media->modified) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Deleted') ?></th>
@@ -68,7 +68,7 @@
                             <th><?= __('User Id') ?></th>
                             <th><?= __('Media Id') ?></th>
                             <th><?= __('Created') ?></th>
-                            <th><?= __('Updated') ?></th>
+                            <th><?= __('Modified') ?></th>
                             <th><?= __('Deleted') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
@@ -79,49 +79,12 @@
                             <td><?= h($discussions->user_id) ?></td>
                             <td><?= h($discussions->media_id) ?></td>
                             <td><?= h($discussions->created) ?></td>
-                            <td><?= h($discussions->updated) ?></td>
+                            <td><?= h($discussions->modified) ?></td>
                             <td><?= h($discussions->deleted) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Discussions', 'action' => 'view', $discussions->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Discussions', 'action' => 'edit', $discussions->id]) ?>
                                 <?= $this->Form->postLink(__('Delete'), ['controller' => 'Discussions', 'action' => 'delete', $discussions->id], ['confirm' => __('Are you sure you want to delete # {0}?', $discussions->id)]) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
-            <div class="related">
-                <h4><?= __('Related User Media') ?></h4>
-                <?php if (!empty($media->user_media)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('User Id') ?></th>
-                            <th><?= __('Media Id') ?></th>
-                            <th><?= __('Review') ?></th>
-                            <th><?= __('Progress') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th><?= __('Updated') ?></th>
-                            <th><?= __('Deleted') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($media->user_media as $userMedia) : ?>
-                        <tr>
-                            <td><?= h($userMedia->id) ?></td>
-                            <td><?= h($userMedia->user_id) ?></td>
-                            <td><?= h($userMedia->media_id) ?></td>
-                            <td><?= h($userMedia->review) ?></td>
-                            <td><?= h($userMedia->progress) ?></td>
-                            <td><?= h($userMedia->created) ?></td>
-                            <td><?= h($userMedia->updated) ?></td>
-                            <td><?= h($userMedia->deleted) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'UserMedia', 'action' => 'view', $userMedia->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'UserMedia', 'action' => 'edit', $userMedia->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'UserMedia', 'action' => 'delete', $userMedia->id], ['confirm' => __('Are you sure you want to delete # {0}?', $userMedia->id)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

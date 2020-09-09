@@ -35,8 +35,8 @@
                     <td><?= h($comment->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Updated') ?></th>
-                    <td><?= h($comment->updated) ?></td>
+                    <th><?= __('Modified') ?></th>
+                    <td><?= h($comment->modified) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Deleted') ?></th>

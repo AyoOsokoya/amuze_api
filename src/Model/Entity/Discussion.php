@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property int|null $user_id
  * @property int|null $media_id
  * @property \Cake\I18n\FrozenTime|null $created
- * @property \Cake\I18n\FrozenTime|null $updated
+ * @property \Cake\I18n\FrozenTime|null $modified
  * @property \Cake\I18n\FrozenTime|null $deleted
  *
  * @property \App\Model\Entity\User $user
@@ -36,7 +36,7 @@ class Discussion extends Entity
         'user_id' => true,
         'media_id' => true,
         'created' => true,
-        'updated' => true,
+        'modified' => true,
         'deleted' => true,
         'user' => true,
         'media' => true,

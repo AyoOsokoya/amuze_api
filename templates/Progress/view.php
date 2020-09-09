@@ -31,10 +31,6 @@
                     <td><?= $this->Number->format($progres->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Rating') ?></th>
-                    <td><?= $this->Number->format($progres->rating) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Progress') ?></th>
                     <td><?= $this->Number->format($progres->progress) ?></td>
                 </tr>

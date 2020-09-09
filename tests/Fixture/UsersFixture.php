@@ -23,7 +23,7 @@ class UsersFixture extends TestFixture
         'email' => ['type' => 'char', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'password' => ['type' => 'char', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
-        'updated' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
+        'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'deleted' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
@@ -48,9 +48,9 @@ class UsersFixture extends TestFixture
                 'name_last' => '',
                 'email' => '',
                 'password' => '',
-                'created' => '2020-08-29 14:44:16',
-                'updated' => '2020-08-29 14:44:16',
-                'deleted' => '2020-08-29 14:44:16',
+                'created' => '2020-09-09 17:45:48',
+                'modified' => '2020-09-09 17:45:48',
+                'deleted' => '2020-09-09 17:45:48',
             ],
         ];
         parent::init();

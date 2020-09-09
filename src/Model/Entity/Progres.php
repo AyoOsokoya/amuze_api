@@ -11,7 +11,6 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int|null $user_id
  * @property int|null $media_id
- * @property int|null $rating
  * @property float|null $progress
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
@@ -34,7 +33,6 @@ class Progres extends Entity
     protected $_accessible = [
         'user_id' => true,
         'media_id' => true,
-        'rating' => true,
         'progress' => true,
         'created' => true,
         'modified' => true,

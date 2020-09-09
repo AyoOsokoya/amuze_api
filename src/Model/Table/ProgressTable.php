@@ -69,10 +69,6 @@ class ProgressTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->integer('rating')
-            ->allowEmptyString('rating');
-
-        $validator
             ->numeric('progress')
             ->allowEmptyString('progress');
 

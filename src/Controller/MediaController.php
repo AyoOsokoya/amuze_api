@@ -11,10 +11,19 @@ namespace App\Controller;
  */
 class MediaController extends AppController
 {
+    /**
+     * Initialization hook method.
+     *
+     * @return void
+     */
     public function initialize(): void
     {
         parent::initialize();
-        $this->loadComponent('RequestHandler');
+        try {
+            $this->loadComponent('RequestHandler');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     /**
@@ -30,7 +39,6 @@ class MediaController extends AppController
         $media = $this->paginate($this->Media);
 
         $this->set(compact('media'));
-        $this->viewBuilder()->setOption('serialize', ['media']);
     }
 
     /**
@@ -47,7 +55,6 @@ class MediaController extends AppController
         ]);
 
         $this->set(compact('media'));
-        $this->viewBuilder()->setOption('serialize', ['media']);
     }
 
     /**

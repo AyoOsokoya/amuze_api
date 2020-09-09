@@ -39,8 +39,8 @@
                     <td><?= h($discussion->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Updated') ?></th>
-                    <td><?= h($discussion->updated) ?></td>
+                    <th><?= __('Modified') ?></th>
+                    <td><?= h($discussion->modified) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Deleted') ?></th>
@@ -58,7 +58,7 @@
                             <th><?= __('Discussion Id') ?></th>
                             <th><?= __('Comment') ?></th>
                             <th><?= __('Created') ?></th>
-                            <th><?= __('Updated') ?></th>
+                            <th><?= __('Modified') ?></th>
                             <th><?= __('Deleted') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
@@ -69,7 +69,7 @@
                             <td><?= h($comments->discussion_id) ?></td>
                             <td><?= h($comments->comment) ?></td>
                             <td><?= h($comments->created) ?></td>
-                            <td><?= h($comments->updated) ?></td>
+                            <td><?= h($comments->modified) ?></td>
                             <td><?= h($comments->deleted) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Comments', 'action' => 'view', $comments->id]) ?>

@@ -15,7 +15,7 @@
                     <th><?= $this->Paginator->sort('name_first') ?></th>
                     <th><?= $this->Paginator->sort('name_last') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('updated') ?></th>
+                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th><?= $this->Paginator->sort('deleted') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
@@ -27,7 +27,7 @@
                     <td><?= h($creator->name_first) ?></td>
                     <td><?= h($creator->name_last) ?></td>
                     <td><?= h($creator->created) ?></td>
-                    <td><?= h($creator->updated) ?></td>
+                    <td><?= h($creator->modified) ?></td>
                     <td><?= h($creator->deleted) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $creator->id]) ?>

@@ -14,7 +14,6 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('user_id') ?></th>
                     <th><?= $this->Paginator->sort('media_id') ?></th>
-                    <th><?= $this->Paginator->sort('rating') ?></th>
                     <th><?= $this->Paginator->sort('progress') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
                     <th><?= $this->Paginator->sort('modified') ?></th>
@@ -28,7 +27,6 @@
                     <td><?= $this->Number->format($progres->id) ?></td>
                     <td><?= $progres->has('user') ? $this->Html->link($progres->user->id, ['controller' => 'Users', 'action' => 'view', $progres->user->id]) : '' ?></td>
                     <td><?= $progres->has('media') ? $this->Html->link($progres->media->title, ['controller' => 'Media', 'action' => 'view', $progres->media->id]) : '' ?></td>
-                    <td><?= $this->Number->format($progres->rating) ?></td>
                     <td><?= $this->Number->format($progres->progress) ?></td>
                     <td><?= h($progres->created) ?></td>
                     <td><?= h($progres->modified) ?></td>

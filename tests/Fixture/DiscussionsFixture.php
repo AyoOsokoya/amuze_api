@@ -22,7 +22,7 @@ class DiscussionsFixture extends TestFixture
         'user_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'media_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
-        'updated' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
+        'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'deleted' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
@@ -46,9 +46,9 @@ class DiscussionsFixture extends TestFixture
                 'title' => '',
                 'user_id' => 1,
                 'media_id' => 1,
-                'created' => '2020-08-29 14:58:47',
-                'updated' => '2020-08-29 14:58:47',
-                'deleted' => '2020-08-29 14:58:47',
+                'created' => '2020-09-09 17:44:46',
+                'modified' => '2020-09-09 17:44:46',
+                'deleted' => '2020-09-09 17:44:46',
             ],
         ];
         parent::init();

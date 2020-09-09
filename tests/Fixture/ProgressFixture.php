@@ -26,7 +26,6 @@ class ProgressFixture extends TestFixture
         'id' => ['type' => 'integer', 'length' => null, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'user_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'media_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'rating' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'progress' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
@@ -52,11 +51,10 @@ class ProgressFixture extends TestFixture
                 'id' => 1,
                 'user_id' => 1,
                 'media_id' => 1,
-                'rating' => 1,
                 'progress' => 1,
-                'created' => '2020-09-04 11:58:58',
-                'modified' => '2020-09-04 11:58:58',
-                'deleted' => '2020-09-04 11:58:58',
+                'created' => '2020-09-09 17:45:14',
+                'modified' => '2020-09-09 17:45:14',
+                'deleted' => '2020-09-09 17:45:14',
             ],
         ];
         parent::init();

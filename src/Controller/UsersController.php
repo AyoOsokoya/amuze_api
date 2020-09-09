@@ -11,6 +11,11 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
+    /**
+     * Initialization hook method.
+     *
+     * @return void
+     */
     public function initialize(): void
     {
         parent::initialize();
@@ -31,7 +36,6 @@ class UsersController extends AppController
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
-        $this->viewBuilder()->setOption('serialize', ['users']);
     }
 
     /**
@@ -48,7 +52,6 @@ class UsersController extends AppController
         ]);
 
         $this->set(compact('user'));
-        $this->viewBuilder()->setOption('serialize', ['user']);
     }
 
     /**

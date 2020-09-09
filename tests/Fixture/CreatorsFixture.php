@@ -21,7 +21,7 @@ class CreatorsFixture extends TestFixture
         'name_first' => ['type' => 'char', 'length' => 64, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'name_last' => ['type' => 'char', 'length' => 64, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
-        'updated' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
+        'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'deleted' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
@@ -44,9 +44,9 @@ class CreatorsFixture extends TestFixture
                 'id' => 1,
                 'name_first' => '',
                 'name_last' => '',
-                'created' => '2020-08-29 14:58:36',
-                'updated' => '2020-08-29 14:58:36',
-                'deleted' => '2020-08-29 14:58:36',
+                'created' => '2020-09-09 17:44:36',
+                'modified' => '2020-09-09 17:44:36',
+                'deleted' => '2020-09-09 17:44:36',
             ],
         ];
         parent::init();

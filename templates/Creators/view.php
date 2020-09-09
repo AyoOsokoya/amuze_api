@@ -35,8 +35,8 @@
                     <td><?= h($creator->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Updated') ?></th>
-                    <td><?= h($creator->updated) ?></td>
+                    <th><?= __('Modified') ?></th>
+                    <td><?= h($creator->modified) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Deleted') ?></th>
@@ -56,7 +56,7 @@
                             <th><?= __('Service Id') ?></th>
                             <th><?= __('Creator Id') ?></th>
                             <th><?= __('Created') ?></th>
-                            <th><?= __('Updated') ?></th>
+                            <th><?= __('Modified') ?></th>
                             <th><?= __('Deleted') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
@@ -69,7 +69,7 @@
                             <td><?= h($media->service_id) ?></td>
                             <td><?= h($media->creator_id) ?></td>
                             <td><?= h($media->created) ?></td>
-                            <td><?= h($media->updated) ?></td>
+                            <td><?= h($media->modified) ?></td>
                             <td><?= h($media->deleted) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Media', 'action' => 'view', $media->id]) ?>

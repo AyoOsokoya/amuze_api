@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property int|null $discussion_id
  * @property string|null $comment
  * @property \Cake\I18n\FrozenTime|null $created
- * @property \Cake\I18n\FrozenTime|null $updated
+ * @property \Cake\I18n\FrozenTime|null $modified
  * @property \Cake\I18n\FrozenTime|null $deleted
  *
  * @property \App\Model\Entity\User $user
@@ -35,7 +35,7 @@ class Comment extends Entity
         'discussion_id' => true,
         'comment' => true,
         'created' => true,
-        'updated' => true,
+        'modified' => true,
         'deleted' => true,
         'user' => true,
         'discussion' => true,

@@ -11,6 +11,11 @@ namespace App\Controller;
  */
 class CreatorsController extends AppController
 {
+    /**
+     * Initialization hook method.
+     *
+     * @return void
+     */
     public function initialize(): void
     {
         parent::initialize();
@@ -31,7 +36,6 @@ class CreatorsController extends AppController
         $creators = $this->paginate($this->Creators);
 
         $this->set(compact('creators'));
-        $this->viewBuilder()->setOption('serialize', ['creators']);
     }
 
     /**
@@ -48,7 +52,6 @@ class CreatorsController extends AppController
         ]);
 
         $this->set(compact('creator'));
-        $this->viewBuilder()->setOption('serialize', ['creator']);
     }
 
     /**

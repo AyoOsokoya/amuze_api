@@ -47,10 +47,16 @@ class UsersTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->hasMany('Comments', [
+            'foreignKey' => 'user_id',
+        ]);
         $this->hasMany('Discussions', [
             'foreignKey' => 'user_id',
         ]);
-        $this->hasMany('UserMedia', [
+        $this->hasMany('Progress', [
+            'foreignKey' => 'user_id',
+        ]);
+        $this->hasMany('Reviews', [
             'foreignKey' => 'user_id',
         ]);
     }

@@ -16,7 +16,7 @@
                     <th><?= $this->Paginator->sort('user_id') ?></th>
                     <th><?= $this->Paginator->sort('media_id') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('updated') ?></th>
+                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th><?= $this->Paginator->sort('deleted') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
@@ -29,7 +29,7 @@
                     <td><?= $discussion->has('user') ? $this->Html->link($discussion->user->id, ['controller' => 'Users', 'action' => 'view', $discussion->user->id]) : '' ?></td>
                     <td><?= $discussion->has('media') ? $this->Html->link($discussion->media->title, ['controller' => 'Media', 'action' => 'view', $discussion->media->id]) : '' ?></td>
                     <td><?= h($discussion->created) ?></td>
-                    <td><?= h($discussion->updated) ?></td>
+                    <td><?= h($discussion->modified) ?></td>
                     <td><?= h($discussion->deleted) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $discussion->id]) ?>

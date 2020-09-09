@@ -15,7 +15,6 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\ServicesTable&\Cake\ORM\Association\BelongsTo $Services
  * @property \App\Model\Table\CreatorsTable&\Cake\ORM\Association\BelongsTo $Creators
  * @property \App\Model\Table\DiscussionsTable&\Cake\ORM\Association\HasMany $Discussions
- * @property \App\Model\Table\UserMediaTable&\Cake\ORM\Association\HasMany $UserMedia
  *
  * @method \App\Model\Entity\Media newEmptyEntity()
  * @method \App\Model\Entity\Media newEntity(array $data, array $options = [])
@@ -63,7 +62,10 @@ class MediaTable extends Table
         $this->hasMany('Discussions', [
             'foreignKey' => 'media_id',
         ]);
-        $this->hasMany('UserMedia', [
+        $this->hasMany('Progress', [
+            'foreignKey' => 'media_id',
+        ]);
+        $this->hasMany('Reviews', [
             'foreignKey' => 'media_id',
         ]);
     }

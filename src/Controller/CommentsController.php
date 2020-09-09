@@ -11,6 +11,11 @@ namespace App\Controller;
  */
 class CommentsController extends AppController
 {
+    /**
+     * Initialization hook method.
+     *
+     * @return void
+     */
     public function initialize(): void
     {
         parent::initialize();
@@ -34,7 +39,6 @@ class CommentsController extends AppController
         $comments = $this->paginate($this->Comments);
 
         $this->set(compact('comments'));
-        $this->viewBuilder()->setOption('serialize', ['comments']);
     }
 
     /**
@@ -51,7 +55,6 @@ class CommentsController extends AppController
         ]);
 
         $this->set(compact('comment'));
-        $this->viewBuilder()->setOption('serialize', ['comment']);
     }
 
     /**

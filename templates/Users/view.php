@@ -43,8 +43,8 @@
                     <td><?= h($user->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Updated') ?></th>
-                    <td><?= h($user->updated) ?></td>
+                    <th><?= __('Modified') ?></th>
+                    <td><?= h($user->modified) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Deleted') ?></th>
@@ -62,7 +62,7 @@
                             <th><?= __('User Id') ?></th>
                             <th><?= __('Media Id') ?></th>
                             <th><?= __('Created') ?></th>
-                            <th><?= __('Updated') ?></th>
+                            <th><?= __('Modified') ?></th>
                             <th><?= __('Deleted') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
@@ -73,7 +73,7 @@
                             <td><?= h($discussions->user_id) ?></td>
                             <td><?= h($discussions->media_id) ?></td>
                             <td><?= h($discussions->created) ?></td>
-                            <td><?= h($discussions->updated) ?></td>
+                            <td><?= h($discussions->modified) ?></td>
                             <td><?= h($discussions->deleted) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Discussions', 'action' => 'view', $discussions->id]) ?>

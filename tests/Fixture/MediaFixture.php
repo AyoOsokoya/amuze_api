@@ -24,7 +24,7 @@ class MediaFixture extends TestFixture
         'service_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'creator_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
-        'updated' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
+        'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'deleted' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
@@ -50,9 +50,9 @@ class MediaFixture extends TestFixture
                 'type_id' => 1,
                 'service_id' => 1,
                 'creator_id' => 1,
-                'created' => '2020-08-29 14:59:04',
-                'updated' => '2020-08-29 14:59:04',
-                'deleted' => '2020-08-29 14:59:04',
+                'created' => '2020-09-09 17:45:00',
+                'modified' => '2020-09-09 17:45:00',
+                'deleted' => '2020-09-09 17:45:00',
             ],
         ];
         parent::init();

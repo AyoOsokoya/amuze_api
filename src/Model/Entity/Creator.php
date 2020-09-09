@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property string|null $name_first
  * @property string|null $name_last
  * @property \Cake\I18n\FrozenTime|null $created
- * @property \Cake\I18n\FrozenTime|null $updated
+ * @property \Cake\I18n\FrozenTime|null $modified
  * @property \Cake\I18n\FrozenTime|null $deleted
  *
  * @property \App\Model\Entity\Media[] $media
@@ -32,7 +32,7 @@ class Creator extends Entity
         'name_first' => true,
         'name_last' => true,
         'created' => true,
-        'updated' => true,
+        'modified' => true,
         'deleted' => true,
         'media' => true,
     ];

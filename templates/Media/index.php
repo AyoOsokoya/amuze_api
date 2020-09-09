@@ -17,7 +17,7 @@
                     <th><?= $this->Paginator->sort('service_id') ?></th>
                     <th><?= $this->Paginator->sort('creator_id') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('updated') ?></th>
+                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th><?= $this->Paginator->sort('deleted') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
@@ -31,7 +31,7 @@
                     <td><?= $media->has('service') ? $this->Html->link($media->service->name, ['controller' => 'Services', 'action' => 'view', $media->service->id]) : '' ?></td>
                     <td><?= $media->has('creator') ? $this->Html->link($media->creator->id, ['controller' => 'Creators', 'action' => 'view', $media->creator->id]) : '' ?></td>
                     <td><?= h($media->created) ?></td>
-                    <td><?= h($media->updated) ?></td>
+                    <td><?= h($media->modified) ?></td>
                     <td><?= h($media->deleted) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $media->id]) ?>

@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use Cake\Core\Exception\Exception;
-
 /**
  * Discussions Controller
  *
@@ -13,6 +11,11 @@ use Cake\Core\Exception\Exception;
  */
 class DiscussionsController extends AppController
 {
+    /**
+     * Initialization hook method.
+     *
+     * @return void
+     */
     public function initialize(): void
     {
         parent::initialize();
@@ -36,7 +39,6 @@ class DiscussionsController extends AppController
         $discussions = $this->paginate($this->Discussions);
 
         $this->set(compact('discussions'));
-        $this->viewBuilder()->setOption('serialize', ['discussions']);
     }
 
     /**
@@ -53,7 +55,6 @@ class DiscussionsController extends AppController
         ]);
 
         $this->set(compact('discussion'));
-        $this->viewBuilder()->setOption('serialize', ['discussion']);
     }
 
     /**
