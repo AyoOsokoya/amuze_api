@@ -11,16 +11,6 @@ namespace App\Controller;
  */
 class UserMediaController extends AppController
 {
-    public function initialize(): void
-    {
-        parent::initialize();
-        try {
-            $this->loadComponent('RequestHandler');
-        } catch (\Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
     /**
      * Index method
      *
@@ -34,7 +24,6 @@ class UserMediaController extends AppController
         $userMedia = $this->paginate($this->UserMedia);
 
         $this->set(compact('userMedia'));
-        $this->viewBuilder()->setOption('serialize', ['userMedia']);
     }
 
     /**
@@ -51,7 +40,6 @@ class UserMediaController extends AppController
         ]);
 
         $this->set(compact('userMedia'));
-        $this->viewBuilder()->setOption('serialize', ['userMedia']);
     }
 
     /**

@@ -6,10 +6,16 @@ namespace App\Test\Fixture;
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * UserMediaFixture
+ * ProgressFixture
  */
-class UserMediaFixture extends TestFixture
+class ProgressFixture extends TestFixture
 {
+    /**
+     * Table name
+     *
+     * @var string
+     */
+    public $table = 'progress';
     /**
      * Fields
      *
@@ -20,7 +26,6 @@ class UserMediaFixture extends TestFixture
         'id' => ['type' => 'integer', 'length' => null, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'user_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'media_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'review' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
         'rating' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'progress' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
@@ -47,12 +52,11 @@ class UserMediaFixture extends TestFixture
                 'id' => 1,
                 'user_id' => 1,
                 'media_id' => 1,
-                'review' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
                 'rating' => 1,
                 'progress' => 1,
-                'created' => '2020-09-04 09:16:18',
-                'modified' => '2020-09-04 09:16:18',
-                'deleted' => '2020-09-04 09:16:18',
+                'created' => '2020-09-04 11:58:58',
+                'modified' => '2020-09-04 11:58:58',
+                'deleted' => '2020-09-04 11:58:58',
             ],
         ];
         parent::init();

@@ -20,6 +20,7 @@
                     echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
                     echo $this->Form->control('media_id', ['options' => $media, 'empty' => true]);
                     echo $this->Form->control('review');
+                    echo $this->Form->control('rating');
                     echo $this->Form->control('progress');
                     echo $this->Form->control('deleted', ['empty' => true]);
                 ?>

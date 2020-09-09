@@ -1,26 +1,21 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\UserMedia $userMedia
+ * @var \App\Model\Entity\ViewData $viewData
  */
 ?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $userMedia->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $userMedia->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List User Media'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('List View Data'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
-        <div class="userMedia form content">
-            <?= $this->Form->create($userMedia) ?>
+        <div class="viewData form content">
+            <?= $this->Form->create($viewData) ?>
             <fieldset>
-                <legend><?= __('Edit User Media') ?></legend>
+                <legend><?= __('Add View Data') ?></legend>
                 <?php
                     echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
                     echo $this->Form->control('media_id', ['options' => $media, 'empty' => true]);

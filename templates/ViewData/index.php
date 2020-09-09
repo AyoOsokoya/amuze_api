@@ -1,12 +1,12 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\UserMedia[]|\Cake\Collection\CollectionInterface $userMedia
+ * @var \App\Model\Entity\ViewData[]|\Cake\Collection\CollectionInterface $viewData
  */
 ?>
-<div class="userMedia index content">
-    <?= $this->Html->link(__('New User Media'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('User Media') ?></h3>
+<div class="viewData index content">
+    <?= $this->Html->link(__('New View Data'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h3><?= __('View Data') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
@@ -23,20 +23,20 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($userMedia as $userMedia): ?>
+                <?php foreach ($viewData as $viewData): ?>
                 <tr>
-                    <td><?= $this->Number->format($userMedia->id) ?></td>
-                    <td><?= $userMedia->has('user') ? $this->Html->link($userMedia->user->id, ['controller' => 'Users', 'action' => 'view', $userMedia->user->id]) : '' ?></td>
-                    <td><?= $userMedia->has('media') ? $this->Html->link($userMedia->media->title, ['controller' => 'Media', 'action' => 'view', $userMedia->media->id]) : '' ?></td>
-                    <td><?= $this->Number->format($userMedia->rating) ?></td>
-                    <td><?= $this->Number->format($userMedia->progress) ?></td>
-                    <td><?= h($userMedia->created) ?></td>
-                    <td><?= h($userMedia->modified) ?></td>
-                    <td><?= h($userMedia->deleted) ?></td>
+                    <td><?= $this->Number->format($viewData->id) ?></td>
+                    <td><?= $viewData->has('user') ? $this->Html->link($viewData->user->id, ['controller' => 'Users', 'action' => 'view', $viewData->user->id]) : '' ?></td>
+                    <td><?= $viewData->has('media') ? $this->Html->link($viewData->media->title, ['controller' => 'Media', 'action' => 'view', $viewData->media->id]) : '' ?></td>
+                    <td><?= $this->Number->format($viewData->rating) ?></td>
+                    <td><?= $this->Number->format($viewData->progress) ?></td>
+                    <td><?= h($viewData->created) ?></td>
+                    <td><?= h($viewData->modified) ?></td>
+                    <td><?= h($viewData->deleted) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $userMedia->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $userMedia->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $userMedia->id], ['confirm' => __('Are you sure you want to delete # {0}?', $userMedia->id)]) ?>
+                        <?= $this->Html->link(__('View'), ['action' => 'view', $viewData->id]) ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $viewData->id]) ?>
+                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $viewData->id], ['confirm' => __('Are you sure you want to delete # {0}?', $viewData->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

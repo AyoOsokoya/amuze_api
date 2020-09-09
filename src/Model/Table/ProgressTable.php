@@ -9,28 +9,28 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * UserMedia Model
+ * Progress Model
  *
  * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsTo $Users
  * @property \App\Model\Table\MediaTable&\Cake\ORM\Association\BelongsTo $Media
  *
- * @method \App\Model\Entity\UserMedia newEmptyEntity()
- * @method \App\Model\Entity\UserMedia newEntity(array $data, array $options = [])
- * @method \App\Model\Entity\UserMedia[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\UserMedia get($primaryKey, $options = [])
- * @method \App\Model\Entity\UserMedia findOrCreate($search, ?callable $callback = null, $options = [])
- * @method \App\Model\Entity\UserMedia patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\UserMedia[] patchEntities(iterable $entities, array $data, array $options = [])
- * @method \App\Model\Entity\UserMedia|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\UserMedia saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\UserMedia[]|\Cake\Datasource\ResultSetInterface|false saveMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\UserMedia[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
- * @method \App\Model\Entity\UserMedia[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\UserMedia[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Progres newEmptyEntity()
+ * @method \App\Model\Entity\Progres newEntity(array $data, array $options = [])
+ * @method \App\Model\Entity\Progres[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Progres get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Progres findOrCreate($search, ?callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Progres patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Progres[] patchEntities(iterable $entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Progres|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Progres saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Progres[]|\Cake\Datasource\ResultSetInterface|false saveMany(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Progres[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Progres[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Progres[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class UserMediaTable extends Table
+class ProgressTable extends Table
 {
     /**
      * Initialize method
@@ -42,7 +42,7 @@ class UserMediaTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('user_media');
+        $this->setTable('progress');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
@@ -67,10 +67,6 @@ class UserMediaTable extends Table
         $validator
             ->nonNegativeInteger('id')
             ->allowEmptyString('id', null, 'create');
-
-        $validator
-            ->scalar('review')
-            ->allowEmptyString('review');
 
         $validator
             ->integer('rating')

@@ -31,6 +31,10 @@
                     <td><?= $this->Number->format($userMedia->id) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Rating') ?></th>
+                    <td><?= $this->Number->format($userMedia->rating) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Progress') ?></th>
                     <td><?= $this->Number->format($userMedia->progress) ?></td>
                 </tr>
@@ -39,8 +43,8 @@
                     <td><?= h($userMedia->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Updated') ?></th>
-                    <td><?= h($userMedia->updated) ?></td>
+                    <th><?= __('Modified') ?></th>
+                    <td><?= h($userMedia->modified) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Deleted') ?></th>

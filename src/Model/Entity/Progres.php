@@ -6,12 +6,11 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * UserMedia Entity
+ * Progres Entity
  *
  * @property int $id
  * @property int|null $user_id
  * @property int|null $media_id
- * @property string|null $review
  * @property int|null $rating
  * @property float|null $progress
  * @property \Cake\I18n\FrozenTime|null $created
@@ -21,7 +20,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\User $user
  * @property \App\Model\Entity\Media $media
  */
-class UserMedia extends Entity
+class Progres extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -35,7 +34,6 @@ class UserMedia extends Entity
     protected $_accessible = [
         'user_id' => true,
         'media_id' => true,
-        'review' => true,
         'rating' => true,
         'progress' => true,
         'created' => true,
