@@ -48,9 +48,9 @@ class UsersFixture extends TestFixture
                 'name_last' => '',
                 'email' => '',
                 'password' => '',
-                'created' => '2020-09-09 17:45:48',
-                'modified' => '2020-09-09 17:45:48',
-                'deleted' => '2020-09-09 17:45:48',
+                'created' => '2020-09-09 17:57:35',
+                'modified' => '2020-09-09 17:57:35',
+                'deleted' => '2020-09-09 17:57:35',
             ],
         ];
         parent::init();

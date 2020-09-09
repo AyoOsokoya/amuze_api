@@ -52,7 +52,7 @@ class MediaController extends AppController
     public function view($id = null)
     {
         $media = $this->Media->get($id, [
-            'contain' => ['Types', 'Services', 'Creators', 'Discussions', 'UserMedia'],
+            'contain' => ['Types', 'Services', 'Creators', 'Discussions'],
         ]);
 
         $this->set(compact('media'));

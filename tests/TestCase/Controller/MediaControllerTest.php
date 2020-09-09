@@ -27,7 +27,6 @@ class MediaControllerTest extends TestCase
         'app.Services',
         'app.Creators',
         'app.Discussions',
-        'app.UserMedia',
     ];
 
     /**

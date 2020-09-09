@@ -18,7 +18,8 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime|null $deleted
  *
  * @property \App\Model\Entity\Discussion[] $discussions
- * @property \App\Model\Entity\UserMedia[] $user_media
+ * @property \App\Model\Entity\Review[] $Progress
+ * @property \App\Model\Entity\Review[] $Review
  */
 class User extends Entity
 {

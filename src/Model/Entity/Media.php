@@ -22,7 +22,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Service $service
  * @property \App\Model\Entity\Creator $creator
  * @property \App\Model\Entity\Discussion[] $discussions
- * @property \App\Model\Entity\UserMedia[] $user_media
+ * @property \App\Model\Entity\Reviews[] $Reviews
  */
 class Media extends Entity
 {
@@ -47,7 +47,7 @@ class Media extends Entity
         'type' => true,
         'service' => true,
         'creator' => true,
+        'reviews' => true,
         'discussions' => true,
-        'user_media' => true,
     ];
 }
