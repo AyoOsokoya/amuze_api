@@ -84,15 +84,6 @@ This data is a object containing general user information (email, name, etc). Ad
     }
 }
 
-```
-## Get Recommendations
-Request the media that will be displayed on the dashboard for the user that is currently viewing. This will be based
-on their viewing habits and suggestions by friends
-
-/recommend_media/user/1
-```json
-TBD
-```
 
 ## Get Discussions
 There can be discussions regarding media by users as part of the social aspect.
@@ -143,8 +134,12 @@ Get a discussion along with all comments.
 }
 
 ```
-
-/recommend_media/user/1
+# TODO
+- For now this is a read only API but later on in the UI development I will add writing of create and read as it will be needs
+- AWS, GCP
+- Creation of custom endpoints
+- Error handling
+- Authentication
 
 # Install
 In the root directory run:
