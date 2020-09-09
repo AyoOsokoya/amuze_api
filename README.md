@@ -13,7 +13,14 @@ rapidly iterate and experiment with API design.
 
 # Endpoints
 - All API requests should end with the .json extension
-- The database data comes from config/schema/amuze_api_data.sql
+- The database data comes from mock data I created in config/schema/amuze_api_data.sql
+
+# Demo
+- Retrieve all users https://amuzeapi.inspireology.com/users/view/.json
+- Retrieve User 1 data https://amuzeapi.inspireology.com/users/view/1.json
+
+- Retrive Media 1 data https://amuzeapi.inspireology.com/media/view/1.json
+- Retrive Media 1 data https://amuzeapi.inspireology.com/media/view/1.json
 
 ## Retrieve User Info
 This data is a object containing general user information (email, name, etc). Additionally it contains:
